@@ -1,2 +1,3 @@
 # NumberRecognition_DeepNeuralNetwork
-Python program for handwritten number recognition
+
+This is my personal repo to learn the basic concepts of deep learning using: http://neuralnetworksanddeeplearning.com/chap1.html
