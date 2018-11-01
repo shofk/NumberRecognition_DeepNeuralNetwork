@@ -14,6 +14,8 @@ class Network(object):
         self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
         self.weights = [np.random.randn(y, x)
                         for x, y in zip(sizes[:-1], sizes[1:])]
+        # print for debug
+        # print(self.biases)
 
     """
     Return the output of the network if 'a' is input.
@@ -41,7 +43,7 @@ class Network(object):
             print(sum)
         n = sum(1 for _ in training_data)
         for j in range(epochs):
-            # randomly shaffle the training_data
+            # randomly shuffle the training_data
             list_training_data = list(training_data)
             random.shuffle(list_training_data)
             training_data = zip(list_training_data[0], list_training_data[1])
@@ -104,7 +106,6 @@ class Network(object):
     def cost_derivative(self, output_activations, y):
         return (output_activations - y)
 
-### Miscellaneous functions
 """ sigmoid function """
 def sigmoid(z):
     return 1.0 / (1.0 + np.exp(-z))
